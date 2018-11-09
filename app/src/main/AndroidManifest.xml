@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MyGroups">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +23,7 @@
         <activity android:name=".NewGroup"/>
         <activity android:name=".GroupShop"/>
         <activity android:name=".ShoppingList"/>
+        <activity android:name=".MyGroups"/>
 
     </application>
 
