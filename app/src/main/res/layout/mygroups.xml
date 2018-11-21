@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.198" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/newGroup_myGroups"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

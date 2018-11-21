@@ -14,7 +14,7 @@ public class MyGroups extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mygroups);
-        FloatingActionButton addGroup = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+        FloatingActionButton addGroup = (FloatingActionButton) findViewById(R.id.newGroup_myGroups);
 
         addGroup.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
         getGroups();
+        //Load default theme
+        Settings.setNightModeDefault();
         //startActivity(new Intent(MainActivity.this, MyGroups.class));
         Button myGroups = (Button) findViewById(R.id.groups_main);
         myGroups.setOnClickListener( (view)->{

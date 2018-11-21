@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
+
+    private static boolean isNightModeEnabled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +26,20 @@ public class Settings extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "I hate unit testing", Toast.LENGTH_LONG).show();
             }
         });
+        Switch nightMode = (Switch) findViewById( R.id.nightToggle_settings );
+
+        nightMode.setChecked( isNightModeEnabled );
+        nightMode.setOnClickListener( ( event )->{
+            isNightModeEnabled = !isNightModeEnabled;
+            Toast.makeText(getApplicationContext(), "Night Mode: " + isNightModeEnabled, Toast.LENGTH_LONG).show();
+        });
+    } //End onCreate
+
+    public static boolean isNightModeOn(){
+        return isNightModeEnabled;
+    } //End getNightModeOn
+
+    public static void setNightModeDefault(){
+        isNightModeEnabled = false;
     }
-}
+} //End settings
