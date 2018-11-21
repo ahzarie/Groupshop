@@ -19,7 +19,7 @@ public class MyGroups extends AppCompatActivity {
         addGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "I hate unit testing", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "I hate unit testing", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(MyGroups.this, NewGroup.class));
             }
         });
