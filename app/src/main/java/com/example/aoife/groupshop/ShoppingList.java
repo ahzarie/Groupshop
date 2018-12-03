@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -23,6 +24,8 @@ public class ShoppingList extends AppCompatActivity {
     Context cont = this;
     private String m_Text = "";
     static Group current = null;
+    Money m;
+    User u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,8 @@ public class ShoppingList extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                          m_Text = input.getText().toString();
-                         
+                         MyGroups.current.shoppingList.add(new Product(m_Text, m, u));
+                        
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
