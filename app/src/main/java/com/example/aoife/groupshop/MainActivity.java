@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
         getGroups();
+        User.getContacts();
         //Load default theme
         Settings.setNightModeDefault();
         //startActivity(new Intent(MainActivity.this, MyGroups.class));

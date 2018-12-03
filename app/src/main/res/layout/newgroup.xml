@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/payment_plan2"
+        android:id="@+id/users_newGroups"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginTop="8dp"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.216" />
 
     <Spinner
-        android:id="@+id/payment_plan"
+        android:id="@+id/payment_newGroups"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginTop="8dp"
