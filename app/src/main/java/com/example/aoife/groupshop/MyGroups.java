@@ -31,6 +31,7 @@ public class MyGroups extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Toast.makeText(getApplicationContext(), "I hate unit testing", Toast.LENGTH_LONG).show();
+                finish();
                 startActivity(new Intent(MyGroups.this, NewGroup.class));
             }
         });

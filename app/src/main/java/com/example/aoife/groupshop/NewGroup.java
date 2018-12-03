@@ -1,5 +1,6 @@
 package com.example.aoife.groupshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ PaymentPlan pPlan;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newgroup);
         Button createGroup = findViewById(R.id.CreateGroup);
-        EditText groupName = findViewById(R.id.GroupName);
+        EditText groupName = findViewById(R.id.GroupName_newGroup);
 
 
         Spinner paymentPlan = findViewById( R.id.payment_newGroups );
@@ -29,7 +30,17 @@ PaymentPlan pPlan;
         createGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //newGroup = new Group(groupName.getText().toString(), )
+                String planName = paymentPlan.getSelectedItem().toString();
+                if ( planName.equals("Split Evenly") ){
+                    pPlan = Group.SPLIT_EVENLY;
+                }else if ( planName.equals("By Adder") ){
+                    pPlan = Group.BY_ADDER;
+                }else {
+                    pPlan = Group.PAY_ALL;
+                }
+                Group.groupList.add( new Group(groupName.getText().toString(), pPlan ) );
+                finish();
+                startActivity(new Intent(NewGroup.this, MyGroups.class));
             }
         });
     }
