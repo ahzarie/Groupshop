@@ -31,5 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getGroups(){
         Group.groupList = new ArrayList<Group>();
+        Group.groupList.add( new Group("Test Pay All", Group.PAY_ALL ) );
+        Group.groupList.add( new Group("Test Share Evenly", Group.SPLIT_EVENLY ) );
     }
 }
