@@ -16,7 +16,7 @@ public class Group {
         public Money getShare(ArrayList<Product> products) {
             Money share = new Money();
             for (Product item: products ) {
-                if( item.OriginalAdder == User.currentUser ){
+                if( item.originalAdder == User.currentUser ){
                     share.add( item.price );
                 }
             }
