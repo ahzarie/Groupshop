@@ -6,5 +6,13 @@ public abstract class PaymentPlan {
 
     public PaymentPlan(){}
 
-    public abstract Money sumProducts(ArrayList<Product> products);
+    public Money sumProducts(ArrayList<Product> products){
+        Money sum = new Money();
+        for (Product item : products) {
+            sum.add( item.price );
+        } //End for item:products
+        return sum.divide(products.size() );
+    } // End sumProducts
+
+    public abstract Money getShare( ArrayList<Product> products );
 }

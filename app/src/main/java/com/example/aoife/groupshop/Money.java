@@ -38,4 +38,16 @@ class Money {
     public String toString(){
         return new String( "$" + dollars + "." + cents);
     } //End toString
+
+    public Money divide( int in ){
+        Money out = new Money();
+        int carry;
+        out.dollars = this.dollars / in;
+        carry = this.dollars % in;
+        out.cents = (this.cents + CENTS_TO_DOLLAR * carry ) / in;
+        if ( (this.cents + CENTS_TO_DOLLAR * carry ) % in != 0 ) {
+            out.remainder = true;
+        }
+        return out;
+    } //End divide
 } //End Money
