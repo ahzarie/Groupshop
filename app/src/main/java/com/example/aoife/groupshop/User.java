@@ -34,4 +34,8 @@ public class User {
             contactNames[iter] = contacts.get(iter).name;
         }
     }  //End updateContactNames
+
+    public String getName(){
+        return name;
+    }
 }  //End User
