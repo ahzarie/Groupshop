@@ -19,6 +19,8 @@ import java.util.ArrayList;
 
 public class MyGroups extends AppCompatActivity {
 
+    static Group current = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
