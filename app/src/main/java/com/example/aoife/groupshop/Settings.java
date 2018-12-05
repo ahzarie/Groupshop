@@ -1,5 +1,6 @@
 package com.example.aoife.groupshop;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +21,9 @@ public class Settings extends AppCompatActivity {
         Button b9 = (Button) findViewById(R.id.button9);
 
         b9.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "I hate unit testing", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(Settings.this, About_Group_Shop.class) );
             }
         });
         Switch nightMode = (Switch) findViewById( R.id.nightToggle_settings );

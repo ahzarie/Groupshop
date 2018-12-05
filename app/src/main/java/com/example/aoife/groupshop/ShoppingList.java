@@ -60,7 +60,7 @@ public class ShoppingList extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                          m_Text = input.getText().toString();
                          MyGroups.current.shoppingList.add(new Product(m_Text, m, u));
-                        
+
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
